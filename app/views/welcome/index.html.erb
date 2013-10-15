@@ -1,0 +1,15 @@
+<h1>Search Startups</h1>
+
+<% if @error %>
+  <p class="error"><%= @error %></p>
+<% end %>
+
+<%= form_for @startup do |f| %>
+  <%= f.text_field 'company_url', :placeholder => 'URL' %>
+  <%= f.submit "Search" %>
+<% end %>
+
+<p>Recent Searched Startups</p>
+<% @all_startups.each do |startup| %>
+  <%= link_to startup.name, startup_path(startup) %><br>
+<% end %>

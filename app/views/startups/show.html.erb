@@ -1,0 +1,14 @@
+<%= link_to 'Back Home', root_path %>
+<h1><%= @startup.name %></h1>
+
+<%= image_tag @startup.logo_url %>
+<p>
+  <b>Location:</b><br>
+  <%= @startup.location %><br><br>
+  <b>Description:</b><br>
+  <%= @startup.product_desc %><br><br>
+  <b>High Concept:</b><br>
+  <%= @startup.high_concept %><br><br>
+  <b>Url:</b><br>
+  <%= @startup.company_url %>
+</p>
